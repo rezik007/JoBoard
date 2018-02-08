@@ -1,0 +1,15 @@
+{
+  "name": "joboard-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Patryk Rezler & Pawel Rokosz",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.15.0",
+    "restify": "^6.3.4"
+  }
+}
