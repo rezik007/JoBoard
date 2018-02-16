@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../../logo.svg';
 
+import Text from '../Text';
+
 class App extends Component {
   render() {
     return (
@@ -9,9 +11,11 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h1 className="app-title">Welcome to React</h1>
         </header>
-        <p className="app-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="app-intro">
+          <Text text="EXAMPLE DEFAULT TEXT" />
+          <Text text="EXAMPLE POSITIVE TEXT" type="text-positive" />
+          <Text text="EXAMPLE NEGATIVE TEXT" type="text-negative" />
+        </div>
       </div>
     );
   }

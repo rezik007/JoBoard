@@ -1,0 +1,24 @@
+.text { 
+  &-default {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+    width: 100%;
+  }
+
+  &-strong {
+    font-weight: bold;
+  }
+
+  &-subdued {
+    color: grey;
+  }
+
+  &-positive {
+    color: green
+  }
+
+  &-negative {
+    color: red;
+  }
+}
