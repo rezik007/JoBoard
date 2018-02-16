@@ -1,6 +1,5 @@
 var config = require('./config'),
     restify = require('restify'),
-    mysql = require('mysql'),
     user = require('./modules/user');
 
 var server = restify.createServer({
