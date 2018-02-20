@@ -1,24 +1,22 @@
-.text { 
-  &-default {
-    color: black;
-    font-size: 14px;
-    margin: 0;
-    width: 100%;
-  }
+.text {
+  color: $defaultDark;
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
 
-  &-strong {
+  &--strong {
     font-weight: bold;
   }
 
-  &-subdued {
-    color: grey;
+  &--subdued {
+    color: $additionalDark;
   }
 
-  &-positive {
-    color: green
+  &--positive {
+    color: $positiveDark;
   }
 
-  &-negative {
-    color: red;
+  &--negative {
+    color: $negativeDark;
   }
 }
