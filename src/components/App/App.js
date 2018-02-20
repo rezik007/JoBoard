@@ -16,9 +16,9 @@ class App extends Component {
           <Text text="EXAMPLE DEFAULT TEXT" type="text" />
           <Text text="EXAMPLE POSITIVE TEXT" type="text text--positive" />
           <Text text="EXAMPLE NEGATIVE TEXT" type="text text--negative" />
-          <Button text="EXAMPLE DEFAULT BUTTON" type="btn" action="button"/>
-          <Button text="EXAMPLE STRONG POSITIVE BUTTON" type="btn btn--strong btn--positive" action="button"/>
-          <Button text="EXAMPLE NEGATIVE BUTTON" type="btn btn--negative" action="button"/>
+          <Button text="EXAMPLE DEFAULT BUTTON" type="btn" action="button" />
+          <Button text="EXAMPLE STRONG POSITIVE BUTTON" type="btn btn--strong btn--positive" action="button" />
+          <Button text="EXAMPLE NEGATIVE BUTTON" type="btn btn--negative" action="button" />
         </div>
       </div>
     );

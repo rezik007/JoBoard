@@ -8,11 +8,11 @@ const Text = ({ text, Selector, type}) => (
 Text.propTypes = {
   text: PropTypes.string.isRequired,
   Selector: PropTypes.string,
-  type: PropTypes.oneOf(['text-default', 'text-strong', 'text-subdued', 'text-positive', 'text-negative']),
+  type: PropTypes.oneOf(['text', 'text--strong', 'text--subdued', 'text--positive', 'text--negative']),
 };
 
 Text.defaultProps = {
-  type: 'text-default',
+  type: 'text',
   Selector: 'p',
   noSelect: false,
 };

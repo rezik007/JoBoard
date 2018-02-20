@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ text, Selector, type, action}) => (
-  <Selector type={action} className={type}>{text}</Selector>
+const Button = ({ text, Selector, type, action, onClick }) => (
+  <Selector type={action} className={type} onClick={onClick}>{text}</Selector>
 );
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  Selector: PropTypes.string,
-  type: PropTypes.oneOf(['btn-default', 'btn-strong', 'btn-subdued', 'btn-positive', 'btn-negative']),
-  action: PropTypes.oneOf(['submit', 'button', 'reset'])
+  type: PropTypes.oneOf(['btn', 'btn--strong', 'btn--subdued', 'btn--positive', 'btn--negative']),
+  action: PropTypes.oneOf(['submit', 'button', 'reset']),
+  onClick: PropTypes.func
 };
 
 Button.defaultProps = {
-  type: 'btn-default',
-  Selector: 'button',
-  noSelect: false,
+  type: 'btn',
+  action: 'button',
+  onClick: () => {}
 };
 
 export default Button;
