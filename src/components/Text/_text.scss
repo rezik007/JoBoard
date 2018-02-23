@@ -1,0 +1,22 @@
+.text {
+  color: $defaultDark;
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+
+  &--strong {
+    font-weight: bold;
+  }
+
+  &--subdued {
+    color: $additionalDark;
+  }
+
+  &--positive {
+    color: $positiveDark;
+  }
+
+  &--negative {
+    color: $negativeDark;
+  }
+}

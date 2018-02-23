@@ -1,6 +1,5 @@
 var config = require('./config'),
     restify = require('restify'),
-    mysql = require('mysql'),
     user = require('./modules/user');
 
 var server = restify.createServer({
@@ -12,9 +11,7 @@ server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser());
 
-var connection = config.db.get;
-
-server.listen(3001, function () {
+server.listen(3001, function() {
 console.log('%s listening at %s', server.name, server.url);
 });
 
