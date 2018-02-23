@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+//Colors Vriables
+$defaultDark: #000;
+$defaultLight: #fff;
+$additionalDark: #2374AB;
+$additionalLight: #68C2FF;
+$positiveDark: #4DCCBD;
+$positiveLight: #D6FFF6;
+$negativeDark: #FF5959;
+$negativeLight: #FF8484;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+@import 'components/App/app';
+@import 'components/Text/text';
+@import 'components/Button/button';

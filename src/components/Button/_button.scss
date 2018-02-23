@@ -1,0 +1,27 @@
+.btn {
+  display: block;
+  color: $defaultLight;
+  font-size: 14px;
+  margin: 0;
+  width: auto;
+  background: $defaultDark;
+  cursor: pointer;
+  border: none;
+  padding: 10px 16px;
+
+  &--strong {
+    font-weight: bold;
+  }
+
+  &--subdued {
+    background: $additionalDark;
+  }
+
+  &--positive {
+    background: $positiveDark
+  }
+
+  &--negative {
+    background: $negativeDark;
+  }
+}
