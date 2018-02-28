@@ -3,6 +3,7 @@ import logo from '../../logo.svg';
 
 import Text from '../Text';
 import Button from '../Button';
+import Input from '../Input';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Button text="EXAMPLE DEFAULT BUTTON" type="btn" action="button" />
           <Button text="EXAMPLE STRONG POSITIVE BUTTON" type="btn btn--strong btn--positive" action="button" />
           <Button text="EXAMPLE NEGATIVE BUTTON" type="btn btn--negative" action="button" />
+          <Input type="input input--positive" action="text"/>
         </div>
       </div>
     );

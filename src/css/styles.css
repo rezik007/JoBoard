@@ -57,3 +57,16 @@ body {
     background: #4DCCBD; }
   .btn--negative {
     background: #FF5959; }
+
+.input {
+  margin: 0;
+  padding: 16px 0;
+  width: 100%;
+  max-width: 300px;
+  color: red;
+  font-size: 1em;
+  border: 1px solid #000; }
+  .input--positive {
+    border: 1px solid #D6FFF6; }
+  .input--negative {
+    border: 1px solid #FF8484; }
