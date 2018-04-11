@@ -5,15 +5,17 @@ var config = require('../config'),
 
 var user = {
     details: function(req, res, next) {
+        res.send('DETAILS OF: ' + req.params.email);
         next();
     },
     register: function(req, res, next) {
         var hashedPassword, jwtPayload, token;
-        connection.query('SELECT email from `users` WHERE email=?;', [req.body.email], (errors, results, fields) => {
+        connection.query('SELECT email from `users` WHERE email=?;', [req.body.email], (error, results, fields) => {
+            if(error) throw error;
             if(results.length === 0) {
                 hashedPassword = bcrypt.hashSync(req.body.password, 8);
-                connection.query('INSERT INTO `users` VALUES(null, ?, ?);', [req.body.email, hashedPassword], (errors, fields, results) => {
-                    if(errors) throw errors;
+                connection.query('INSERT INTO `users` VALUES(null, ?, ?);', [req.body.email, hashedPassword], (error, results, fields) => {
+                    if(error) throw error;
                     jwtPayload = {
                         email: req.body.email
                     };
@@ -21,7 +23,10 @@ var user = {
                                         expiresIn: 1440 // expires in 24 hours
                                     });
                     res.status(201);
-                    res.send({auth: true, token: token});
+                    res.send({
+                        auth: true,
+                        token: token
+                    });
                 });
             } else {
                 res.status(400);
@@ -32,7 +37,8 @@ var user = {
     },
     login: function(req, res, next) {
         var jwtPayload, token;
-        connection.query('SELECT password from `users` WHERE email=?;', [req.body.email], (errors, results, fields) => {
+        connection.query('SELECT password from `users` WHERE email=?;', [req.body.email], (error, results, fields) => {
+            if(error) throw error;
             if(results.length === 0 || !(bcrypt.compareSync(req.body.password, results[0].password))) {
                 res.status(401);
                 res.send({auth: false, token: null});
@@ -43,10 +49,14 @@ var user = {
                 token = jwt.sign(jwtPayload, config.jwtKey, {
                                     expiresIn: 1440 // expires in 24 hours
                                 });
-                res.status(201);
-                res.send({auth: true, token: token});
+                res.status(200);
+                res.send({
+                    auth: true,
+                    token: token
+                });
             };
         });
+        next();
     }
 };
 

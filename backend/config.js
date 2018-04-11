@@ -10,11 +10,13 @@ var config = {
   db: {
     get: mysql.createConnection({
       host     : 'localhost',
-      user     : 'root',
-      password : '',
-      database : 'joboard'
+      user     : 'joboard',
+      password : 'joboard',
+      database : 'joboard',
+      port: 3310
     })
-  }
+  },
+  jwtKey: 'SECRET',
 };
 
 module.exports = config;
