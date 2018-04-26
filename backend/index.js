@@ -16,5 +16,6 @@ console.log('%s listening at %s', server.name, server.url);
 });
 
 // user routes --------------------------
-server.get(config.apiPath + '/user/:id', user.details);
-server.post(config.apiPath + '/user', user.add);
+server.get(config.apiPath + '/user/:email', user.details);
+server.post(config.apiPath + '/user/register', user.register);
+server.post(config.apiPath + '/user/login', user.login);

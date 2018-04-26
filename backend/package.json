@@ -9,6 +9,8 @@
   "author": "Patryk Rezler & Pawel Rokosz",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.2.1",
     "mysql": "^2.15.0",
     "restify": "^6.3.4"
   }
